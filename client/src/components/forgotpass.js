@@ -5,6 +5,9 @@ const Forgotpass=({forgotpassword,text})=>{
     const [email,setemail]=useState("Provide your email")
     return (
         <>
+        <h1>
+            Forgot Password
+        </h1>
         <input type="text" onChange={(e)=>setemail(e.target.value)}/>
         <button onClick={()=>forgotpassword(email)}>Next</button><br/>
         <h3>{text}</h3>

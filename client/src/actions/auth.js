@@ -13,6 +13,9 @@ export const login=(email,pass)=>async dispatch=>{
     })
     
     const token=await axios.post("/api/login",data).then((res)=>{
+        new Noty({
+            text: 'Login Sucessfull'
+        }).show();
         const token=res.data.token
         dispatch({
             type:types.GOT_USER_TOKEN,
@@ -20,6 +23,9 @@ export const login=(email,pass)=>async dispatch=>{
         })
     })
     .catch(()=>{
+        new Noty({
+            text: 'Login Failed'
+        }).show();
         dispatch({
             type:types.LOGIN_ERROR,
             payload:{

@@ -12,6 +12,9 @@ const Dashboard=({islogin,changepass,logout})=>{
     }
     return (
         <>
+        <h1>
+            Dashboard
+        </h1>
         <div onClick={()=>logout()}>Sign Out</div>
         <input type="text" onChange={(e)=>setpass(e.target.value)}/><br/>
         <button onClick={()=>changepass(pass)}>Change Password</button>

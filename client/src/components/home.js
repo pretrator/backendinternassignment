@@ -12,13 +12,14 @@ const Home=({login,islogin})=>{
     return (
         <>
         <div>
+        <h1>
+            Login Page
+        </h1>
         <Link to="/register">Register</Link>
-       
-        
       </div>
         <input type="text" onChange={(e)=>setemail(e.target.value)} /><br/>
-        <input type="text" onChange={(e)=>setpass(e.target.value)} />
-        <button onClick={()=>login(email,pass)} >Login</button><br/>
+        <input type="password" onChange={(e)=>setpass(e.target.value)} />
+        <button onClick={()=>login(email,pass)}>Login</button><br/>
         <Link to="/forgotpass">Forgot Password</Link>
         </>
     );
