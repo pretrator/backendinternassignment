@@ -16,6 +16,9 @@ export const changepass=(pass)=>async (dispatch,getState)=>{
         })
     })
     .catch(()=>{
+        new Noty({
+            text: 'Password Changed Failed'
+        }).show();
         dispatch({
             type:types.PASSWORD_CHANGED_ERROR,
             payload:{
@@ -33,6 +36,9 @@ export const forgotpassword=(email)=>async (dispatch)=>{
     }
 
     const token=await axios.post("/forgotpass",data).then((res)=>{
+        new Noty({
+            text: 'Password Changed Failed'
+        }).show();
         dispatch({
             type:types.FORGOTPASSWORD,
             payload:{msg:res.data}
