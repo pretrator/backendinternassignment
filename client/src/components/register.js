@@ -19,6 +19,7 @@ const Register=({register})=>{
 
     return (
         <>
+        <h1>Register New User</h1>
         <input type="text" value={email} onChange={(e)=>setemail(e.target.value)}/><br/>
         <input type="text" value={pass} onChange={(e)=>setpass(e.target.value)}/><br/>
         <input type="text" value={confirmpass} onChange={checkpass}/><br/>
