@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app",
+    "start": "TYPE='PROD' && node app",
     "dev": "concurrently \"nodemon app\" \"npm start --prefix client\"",
     "gitadd": "git add .",
     "gitcommit": "git commit -m 'deploy'",
