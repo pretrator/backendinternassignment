@@ -3,9 +3,9 @@ import {connect} from 'react-redux';
 import {register} from './../actions/auth'
 
 const Register=({register})=>{
-    const [email,setemail]=useState("")
-    const [pass,setpass]=useState("")
-    const [confirmpass,setcpass]=useState("")
+    const [email,setemail]=useState("email")
+    const [pass,setpass]=useState("Password")
+    const [confirmpass,setcpass]=useState("Confirm PAssword")
     const [passtext,setpasstext]=useState("")
     const checkpass=(e)=>{
         setcpass(e.target.value)
@@ -19,9 +19,9 @@ const Register=({register})=>{
 
     return (
         <>
-        <input type="text" onChange={(e)=>setemail(e.target.value)}/><br/>
-        <input type="text" onChange={(e)=>setpass(e.target.value)}/><br/>
-        <input type="text" onChange={checkpass}/><br/>
+        <input type="text" value={email} onChange={(e)=>setemail(e.target.value)}/><br/>
+        <input type="text" value={pass} onChange={(e)=>setpass(e.target.value)}/><br/>
+        <input type="text" value={confirmpass} onChange={checkpass}/><br/>
         <button onClick={()=>register(email,pass)}>Register</button>
         {passtext}
         </>
