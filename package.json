@@ -9,7 +9,7 @@
     "gitadd": "git add .",
     "gitcommit": "git commit -m 'deploy'",
     "gitpush": "git push",
-    "deploy":"npm run gitadd && npm run gitcommit && npm run gitpush",
+    "deploy": "npm run gitadd && npm run gitcommit && npm run gitpush",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -31,6 +31,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.2",
     "nodemailer": "^6.4.11",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "react-redux": "^7.2.1"
   }
 }

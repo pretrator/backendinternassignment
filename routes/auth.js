@@ -34,7 +34,9 @@ router.post('/register', async (request, response) => {
       passhash,
     })
     const savedUser = await user.save()
-    response.json(savedUser)
+    response.json({
+      msg:"User registration Successfull"
+    })
 })
 
 module.exports=router
