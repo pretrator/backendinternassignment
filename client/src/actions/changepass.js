@@ -1,5 +1,6 @@
 import axios from "axios"
 import types from "./types"
+import Noty from 'noty';
 
 export const changepass=(pass)=>async (dispatch,getState)=>{
     const data={
